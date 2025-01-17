@@ -1,4 +1,4 @@
-import asyncio as aio
+import asyncio
 
 from .message import MessageType
 
@@ -11,12 +11,12 @@ TIME_TO_SLEEP = 0.5
 class HueLightDevice:
     async def connect(self) -> None:
         print("Connecting Hue Light.")
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Hue Light connected.")
 
     async def disconnect(self) -> None:
         print("Disconnecting Hue Light.")
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Hue Light disconnected.")
 
     async def send_message(
@@ -26,19 +26,19 @@ class HueLightDevice:
             f"Hue Light handling message of type"
             f" {message_type.name} with data [{data}]."
         )
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Hue Light received message.")
 
 
 class SmartSpeakerDevice:
     async def connect(self) -> None:
         print("Connecting to Smart Speaker.")
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Smart Speaker connected.")
 
     async def disconnect(self) -> None:
         print("Disconnecting Smart Speaker.")
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Smart Speaker disconnected.")
 
     async def send_message(
@@ -48,19 +48,19 @@ class SmartSpeakerDevice:
             f"Smart Speaker handling message of type"
             f" {message_type.name} with data [{data}]."
         )
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Smart Speaker received message.")
 
 
 class SmartToiletDevice:
     async def connect(self) -> None:
         print("Connecting to Smart Toilet.")
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Smart Toilet connected.")
 
     async def disconnect(self) -> None:
         print("Disconnecting Smart Toilet.")
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Smart Toilet disconnected.")
 
     async def send_message(
@@ -72,5 +72,5 @@ class SmartToiletDevice:
             f"Smart Toilet handling message of type"
             f" {message_type.name} with data [{data}]."
         )
-        await aio.sleep(TIME_TO_SLEEP)
+        await asyncio.sleep(TIME_TO_SLEEP)
         print("Smart Toilet received message.")
